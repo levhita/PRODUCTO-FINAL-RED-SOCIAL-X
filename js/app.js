@@ -37,9 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var promise=auth.createUserWithEmailAndPassword(userEmailValue1,passwordValue1);
     //promise.catch( e => console.log(e.message));
     promise.catch( e => alert(e.message));
-    });
+  });
 
-    firebase.auth().onAuthStateChanged(firebaseUser =>{
+  firebase.auth().onAuthStateChanged(firebaseUser =>{
         if(firebaseUser){
             console.log("logeado");
            location.href="index.html"
